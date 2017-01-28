@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="slider">
@@ -32,7 +33,7 @@
     <header class="main-header">
 
         <div class="logo">
-          <img src="http://placehold.it/150x50" width="150" height="50" alt="Магазин «Глейси»">
+          <img src="img/logo.png" width="154" height="64" alt="Магазин «Глейси»">
         </div>
         <nav class="main-navigation">
           <ul>
@@ -67,15 +68,15 @@
         <div class="user-block">
           <a class="search" href="#">Поиск</a>
             <form class="search" action="/echo" method="get">
-              <input type="text" name="search" id="search" value="Что ищем?">
-              <label for="search"></label>
+              <input type="search" name="search" id="search">
+              <label for="search">Что ищем?</label>
             </form>
           <a class="login" href="#">Вход</a>
-            <form class="login" action="/echo" method="get">
-              <input type="text" name="user-block-email" id="user-block-email" value="Электронная почта">
-              <label for="user-block-email"></label>
-              <input type="text" name="password" id="password" value="Пароль">
-              <label for="password"></label>
+            <form class="login" action="/echo" method="post">
+              <input type="email" name="user-block-email" id="user-block-email">
+              <label for="user-block-email">Электронная почта</label>
+              <input type="password" name="password" id="password">
+              <label for="password">Пароль</label>
               <input type="submit" class="login-btn" value="Войти">
               <div class="forget-new">
                 <a class="forget-new-link" href="#">Забыли пароль?</a>
@@ -106,7 +107,7 @@
       </section>
       <section class="catalog-items">
         <article class="catalog-item">
-          <img src="http://placehold.it/100x100" width="100" height="100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+          <img src="img/item-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
           <div class="catalog-price">
             310 <span>/кг</span>
           </div>
@@ -116,7 +117,7 @@
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="catalog-item">
-          <img src="http://placehold.it/100x100" width="100" height="100" alt="Сливочно-кофейное с кусочками шоколада">
+          <img src="img/item-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
           <div class="catalog-price">
             380 <span>/кг</span>
           </div>
@@ -126,7 +127,7 @@
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="catalog-item">
-            <img src="http://placehold.it/100x100" width="100" height="100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <img src="img/item-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <div class="catalog-price">
               355 <span>/кг</span>
             </div>
@@ -136,7 +137,7 @@
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="catalog-item">
-            <img src="http://placehold.it/100x100" width="100" height="100" alt="Сливочное крем-брюле с карамельной подливкой">
+            <img src="img/item-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <div class="catalog-price">
               415 <span>/кг</span>
             </div>
@@ -173,7 +174,8 @@
         <div class="subscribe">
           <p class="subscribe-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form class="mail-form" action="/echo" method="get">
-          <input type="text" name="email" id="email" value="Электронная почта">
+          <input type="email" name="email" id="email">
+          <label for="email">Электронная почта</label>
           <input type="submit" class="subscribe-btn" value="Отправить">
           </form>
       </div>
@@ -219,12 +221,12 @@
         <a class="close" href="#"></a>
         <b class="overlay-title">Мы обязательно вам ответим!</b>
         <div class="overlay-name">
-          <label for="name"></label>
-          <input type="text" name="name" id="name" value="Как вас зовут?">
+          <label for="name">Как вас зовут?</label>
+          <input type="text" name="name" id="name">
         </div>
         <div class="overlay-mail">
-          <label for="overlay-mail"></label>
-          <input type="text" name="overlay-mail" id="overlay-mail" value="Ваша почта для ответа?">
+          <label for="overlay-mail">Ваша почта для ответа?</label>
+          <input type="email" name="overlay-mail" id="overlay-mail">
         </div>
         <div class="overlay-massage">
           <label for="massage"></label>
