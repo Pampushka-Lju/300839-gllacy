@@ -42,7 +42,7 @@ h2 {
   background-color: green;
 }
 
-.container {
+.content-wrapper {
   width: 860px;
   margin: 0 auto;
   padding: 0 20px;
@@ -59,16 +59,33 @@ h2 {
 
 .main-navigation {
   min-height: 70px;
-  width: 365px;
+  font-size: 0px;
+  width: 370px;
   float: left;
   background-color: yellow;
 }
 
+.main-navigation li {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.main-navigation .subnav {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+
+.time-work {
+  float: right;
+}
 
 .inner-main {
   background-color: green;
 }
-
 
 .breadcrumbs {
     margin: 0;
@@ -77,13 +94,18 @@ h2 {
     background-color: yellow;
 }
 
+.promo {
+  float: left;
+  background-color: yellow;
+}
+
 .promo-item {
   float: left;
   width: 420px;
   margin-right: 20px;
   margin-bottom: 40px;
   min-height: 80px;
-  background-color: yellow;
+  background-color: green;
 }
 
 .promo-item:last-child {
@@ -92,9 +114,40 @@ h2 {
 
 .catalog-filter {
   margin: 0;
+  font-size: 0px;
   min-height: 70px;
   width: 860px;
   background-color: yellow;
+}
+
+.filter-group {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  margin-right: 10px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  background-color: green;
+}
+
+.filter-group:nth-child(3) {
+  display: inline-block;
+  vertical-align: top;
+  width: 420px;
+  margin-right: 10px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  background-color: green;
+}
+
+.filter-group:nth-child(4) {
+  display: inline-block;
+  vertical-align: top;
+  width: 700px;
+  margin-right: 10px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  background-color: green;
 }
 
 .catalog {
@@ -126,6 +179,15 @@ h2 {
   background-color: yellow;
   min-height: 375px;
   margin-bottom: 40px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.features-item {
+  float:left;
+  width: 400px;
+  background-color: green;
+
 }
 
 .blog-preview {
@@ -157,29 +219,37 @@ h2 {
 
 .main-footer {
   background-color: green;
+  font-size: 0px;
 }
 
 .footer-social {
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   width: 200px;
   margin-right: 20px;
   padding-top: 37px;
   min-height: 90px;
+  font-size: 16px;
   background-color: yellow;
 }
 
 .footer-menu {
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   width: 420px;
   padding-top: 37px;
+  margin-right: 20px;
   min-height: 90px;
+  font-size: 16px;
   background-color: yellow;
 }
 
 .footer-copyright {
-  float: right;
+  display: inline-block;
+  vertical-align: middle;
   width: 200px;
   padding-top: 20px;
   min-height: 90px;
+  font-size: 16px;
   background-color: yellow;
 }
