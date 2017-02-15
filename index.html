@@ -3,31 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="slider">
-      <input type="radio" id="btn-1" name="toggle" checked>
-      <input type="radio" id="btn-2" name="toggle">
-      <input type="radio" id="btn-3" name="toggle">
-      <div class="slide" id="slide1">
-        <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
-        <a class="slide-btn" href="#">Давайте оба!</a>
-      </div>
-      <div class="slide" id="slide2">
-        <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
-        <a class="slide-btn" href="#">Давайте оба!</a>
-      </div>
-      <div class="slide" id="slide3">
-        <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
-        <a class="slide-btn" href="#">Давайте оба!</a>
-      </div>
-        <div class="slider-controls">
-          <label for="btn-1"></label>
-          <label for="btn-2"></label>
-          <label for="btn-3"></label>
-      </div>
-    </div>
+    <input type="radio" id="btn-1" name="toggle" checked>
+    <input type="radio" id="btn-2" name="toggle">
+    <input type="radio" id="btn-3" name="toggle">
+
     <div class="site-wrapper">
       <div class="content-wrapper clearfix">
     <header class="main-header">
@@ -37,7 +21,7 @@
         </div>
         <nav class="main-navigation">
           <ul>
-            <li>
+            <li class="active">
               <a href="#">Каталог</a>
               <ul class="subnav">
                 <li class="subnav-item">
@@ -68,14 +52,14 @@
         <div class="user-block">
           <a class="search" href="#">Поиск</a>
             <form class="search" action="/echo" method="get">
-              <input type="search" name="search" id="search">
+              <input type="search" name="search" id="search" placeholder="Что ищем?">
               <label for="search">Что ищем?</label>
             </form>
           <a class="login" href="#">Вход</a>
             <form class="login" action="/echo" method="post">
-              <input type="email" name="user-block-email" id="user-block-email">
+              <input type="email" name="user-block-email" id="user-block-email" placeholder="Электронная почта">
               <label for="user-block-email">Электронная почта</label>
-              <input type="password" name="password" id="password">
+              <input type="password" name="password" id="password" placeholder="Пароль">
               <label for="password">Пароль</label>
               <input type="submit" class="login-btn" value="Войти">
               <div class="forget-new">
@@ -92,6 +76,25 @@
         </div>
 
     </header>
+    <div class="slider">
+      <div class="slide" id="slide1">
+        <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+        <a class="slide-btn" href="#">Давайте оба!</a>
+      </div>
+      <div class="slide" id="slide2">
+        <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
+        <a class="slide-btn" href="#">Давайте оба!</a>
+      </div>
+      <div class="slide" id="slide3">
+        <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+        <a class="slide-btn" href="#">Давайте оба!</a>
+      </div>
+      <div class="slider-controls">
+        <label for="btn-1"></label>
+        <label for="btn-2"></label>
+        <label for="btn-3"></label>
+      </div>
+    </div>
   </div>
     <div class="content-wrapper clearfix">
     <main class="inner-main">
@@ -99,22 +102,22 @@
         <article class="promo-item">
           <b class="promo-name">Малинка даром!</b>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="promo-btn" href="#">Хочу варенье!</a>
+          <a class="btn promo-btn" href="#">Хочу варенье!</a>
         </article>
         <article class="promo-item">
           <b class="promo-name">Шоколадки даром!</b>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="promo-btn" href="#">Хочу шоколадки!</a>
+          <a class="btn promo-btn" href="#">Хочу шоколадки!</a>
         </article>
       </section>
-      <section class="catalog">
+      <section class="catalog catalog-index">
         <article class="catalog-item">
           <img src="img/item-1.png" width="200" height="200" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
           <div class="catalog-price">
             310 <span>/кг</span>
           </div>
           <div class="catalog-item-name">
-            Сливочное с апельсиновым<span>джемом и цитрусовой стружкой</span>
+            Сливочное с <span>апельсиновым джемом </span>и цитрусовой стружкой
           </div>
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
@@ -151,20 +154,18 @@
       </section>
       <section class="features clearfix">
         <h2 class="features-title">Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
-
-            <div class="features-item feature-technology">
-              <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологиями.</p>
-            </div>
-            <div class="features-item feature-ecomilk">
-              <p>Для приготовления мороженого используются настоящие сливки и молоко высшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологического чистого сырья.</p>
-            </div>
-            <div class="features-item feature-quality">
-              <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-            </div>
-            <div class="features-item feature-thermopack">
-              <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
-            </div>
-
+          <div class="features-item feature-technology">
+            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологиями.</p>
+          </div>
+          <div class="features-item feature-ecomilk">
+            <p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+          </div>
+          <div class="features-item feature-quality">
+            <p>Для приготовления мороженого используются настоящие сливки и молоко высшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+          </div>
+          <div class="features-item feature-thermopack">
+            <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+          </div>
       </section>
       <section class="blog-subscribe">
         <article class="blog-preview">
@@ -176,9 +177,9 @@
         <div class="subscribe">
           <p class="subscribe-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form class="mail-form" action="/echo" method="get">
-          <input type="email" name="email" id="email">
+          <input class="email" type="email" name="email" id="email" placeholder="Электронная почта">
           <label for="email">Электронная почта</label>
-          <input type="submit" class="subscribe-btn" value="Отправить">
+          <input class="btn" type="submit" class="subscribe-btn" value="Отправить">
           </form>
       </div>
       </section>
@@ -189,14 +190,13 @@
       </div>
       <div class="content-wrapper clearfix">
         <footer class="main-footer">
-
-        <div class="feedback-form">
-          <p class="feedback-form-tip">
-            Адрес главного офиса и офлайн магазина:
-            <b>ул.Большая Конюшенная19/8, Санкт-Петербург</b><br>
-            Для заказов по телефону:<b>8 812 450-25-25</b>(с 10 до 20 ежедневно)</p>
-          <a class="feedback-link" href="#">Форма обратной связи"</a>
-        </div>
+          <div class="feedback-form">
+            <p class="feedback-form-tip">
+              Адрес главного офиса и офлайн магазина:
+              <b>ул.Большая Конюшенная19/8, Санкт-Петербург</b><br>
+              Для заказов по телефону:<b>8 812 450-25-25</b>(с 10 до 20 ежедневно)</p>
+              <a class="feedback-link" href="#">Форма обратной связи"</a>
+          </div>
         <div class="footer-bottom">
         <section class="footer-social">
           <a class="social-btn social-btn-twit" href="#">Твиттер</a>
@@ -218,29 +218,28 @@
           Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> 2017
         </section>
       </div>
-
       </footer>
     </div>
     <div class="overlay">
+      <button class="overlay-close" type="button" title="Закрыть">Закрыть</button>
       <form class="overlay-form" action="/echo" method="get">
         <a class="close" href="#"></a>
         <b class="overlay-title">Мы обязательно вам ответим!</b>
         <div class="overlay-name">
           <label for="name">Как вас зовут?</label>
-          <input type="text" name="name" id="name">
+          <input type="text" name="name" id="name" placeholder="Как вас зовут?">
         </div>
         <div class="overlay-mail">
           <label for="overlay-mail">Ваша почта для ответа?</label>
-          <input type="email" name="overlay-mail" id="overlay-mail">
+          <input type="email" name="overlay-mail" id="overlay-mail" placeholder="Ваша почта для ответа?">
         </div>
         <div class="overlay-massage">
           <label for="massage"></label>
           <textarea id="massage">Напишите что-нибудь..."</textarea>
         </div>
       </form>
-      <!--Почему-то валидацию не проходит, когда баттон пишу-->
       <input type="submit" class="overlay-btn" value="Отправить">
     </div>
-  </div>
+
   </body>
 </html>

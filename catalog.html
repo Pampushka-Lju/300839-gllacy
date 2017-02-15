@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси - Каталог</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -77,7 +79,7 @@
           <li>
             <a href="#">Каталог</a>
           </li>
-          <li>
+          <li class="current">
             Сливочное
           </li>
         </ul>
@@ -85,22 +87,26 @@
         <form class="catalog-filter" action="/echo" method="get">
           <div class="filter-group">
             <label for="sorting">Сортировка:</label>
-            <select name="sorting" id="sorting">
-              <option value="1">По популярности</option>
+            <select class="sorting" name="sorting" id="sorting">
+              <option value="1">по популярности</option>
               <option value="2">По цене</option>
               <option value="3">По ...</option>
             </select>
           </div>
           <div class="filter-group">
-            <label for="price">Цена: 100 руб. - 500 руб.</label>
-            <div class="filter-form-price-range-pict">
-              <div class="filter-form-price-range-main-scale"></div>
-              <div class="filter-form-price-range-diapason"></div>
-              <div class="filter-form-price-range-low"></div>
-              <div class="filter-form-price-range-high"></div>
+            <div class="price-controls">
+              <label class="min-price">Цена: <input type="text" name="min-price" value="100 руб."></label>
+              <label class="max-price">- <input type="text" name="max-price" value="500 руб."></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
             </div>
           </div>
-          <div class="filter-group">
+          <div class="filter-group filter-radio">
               <h2 class="filter-title">Жирность:</h2>
               <input type="radio" name="zero" id="zero" value="0%">
               <label for="zero">0%</label>
@@ -111,12 +117,12 @@
               <input type="radio" name="above-thirty" id="above-thirty" value="above 30%">
               <label for="above-thirty">выше 30%</label>
             </div>
-            <div class="filter-group">
+            <div class="filter-group filter-checkbox">
               <h2 class="filter-item">Наполнители:</h2>
               <input type="checkbox" name="chocolate" id="chocolate" checked>
               <label for="chocolate">шоколадные</label>
               <input type="checkbox" name="sugar" id="sugar" checked>
-              <label for="sugar">шоколадные</label>
+              <label for="sugar">сахарные присыпки</label>
               <input type="checkbox" name="fruit" id="fruit">
               <label for="fruit">фрукты</label>
               <input type="checkbox" name="syrup" id="syrup">
@@ -124,8 +130,7 @@
               <input type="checkbox" name="jam" id="jam">
               <label for="jam">джем</label>
             </div>
-            <!--Почему-то валидацию не проходит, когда баттон пишу-->
-            <batton type="submit">Применить</batton>
+            <button class="btn-transparent" type="submit">Применить</button>
           </form>
           <section class="catalog">
             <article class="catalog-item">
@@ -136,6 +141,7 @@
               <div class="catalog-item-name">
                 Сливочное с апельсиновым<span>джемом и цитрусовой стружкой</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-2.png" width="200" height="200" alt="Сливочно-кофейное с кусочками шоколада">
@@ -145,6 +151,7 @@
               <div class="catalog-item-name">
                 Сливочно-кофейное с кусочками<span>шоколада</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-3.png" width="200" height="200" alt="Сливочно-клубничное с присыпкой из белого шоколада">
@@ -154,6 +161,7 @@
               <div class="catalog-item-name">
                 Сливочно-клубничное с<span>присыпкой из белого шоколада</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-4.png" width="200" height="200" alt="Сливочное крем-брюле с карамельной подливкой">
@@ -163,6 +171,7 @@
               <div class="catalog-item-name">
                 Сливочное крем-брюле с<span>карамельной подливкой"</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-5.png" width="200" height="200" alt="Сливочное с брусничным джемом">
@@ -172,6 +181,7 @@
               <div class="catalog-item-name">
                 Сливочное с брусничным<span>джемом</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-6.png" width="200" height="200" alt="Сливочно-черничное с цельными ягодами черники">
@@ -181,6 +191,7 @@
               <div class="catalog-item-name">
                 Сливочно-черничное с цельными<span>ягодами черники</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-7.png" width="200" height="200" alt="Сливочно-лимонное с карамельной присыпкой">
@@ -199,6 +210,7 @@
               <div class="catalog-item-name">
                 Сливочное с шоколадной<span>стружкой"</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-9.png" width="200" height="200" alt="Сливочно-ванильное с кусочками шоколада">
@@ -208,6 +220,7 @@
               <div class="catalog-item-name">
                 Сливочно-ванильное с<span>кусочками шоколада</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-10.png" width="200" height="200" alt="Сливочное с ментоловым сиропом">
@@ -217,6 +230,7 @@
               <div class="catalog-item-name">
                 Сливочное с ментоловым<span>сиропом</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-11.png" width="200" height="200" alt="Сливочное с кусочками черного шоколада">
@@ -226,6 +240,7 @@
               <div class="catalog-item-name">
                 Сливочное с кусочками черного<span>шоколада</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="catalog-item">
               <img src="img/item-12.png" width="200" height="200" alt="Сливочное с мятным сиропом">
@@ -235,6 +250,7 @@
               <div class="catalog-price">
                 420 <span>/кг</span>
               </div>
+              <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <ul class="pagination">
                 <li>
