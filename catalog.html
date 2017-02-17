@@ -10,34 +10,34 @@
   <body>
 
     <div class="content-wrapper clearfix">
-    <header class="main-header">
+    <header class="main-header clearfix">
         <a class="logo" href="#">
           <img src="img/logo.png" width="154" height="64" alt="Магазин «Глейси»">
         </a>
         <nav class="main-navigation">
-          <ul>
+          <ul class="main-navigation-list">
             <li>
-              <a href="#">Каталог</a>
+              <a class="main-navigation-link" href="#">Каталог</a>
             </li>
             <li>
-              <a href="#">Доставка и оплата</a>
+              <a class="main-navigation-link" href="#">Доставка и оплата</a>
             </li>
             <li>
-              <a href="#">О Компании</a>
+              <a class="main-navigation-link" href="#">О Компании</a>
             </li>
           </ul>
         </nav>
         <div class="user-block">
-          <a class="search" href="#">Поиск</a>
-            <form class="search" action="/echo" method="get">
-              <input type="text" name="search" id="search" value="Что ищем?">
-              <label for="search"></label>
+          <a class="search" href="#"></a>
+            <form class="search-form" action="/echo" method="get">
+              <input type="search" name="search" id="search" placeholder="Что ищем?">
+              <label for="search">Что ищем?</label>
             </form>
           <a class="login" href="#">Вход</a>
-            <form class="login" action="/echo" method="post">
-              <input type="email" name="user-block-email" id="user-block-email">
+            <form class="login-form" action="/echo" method="post">
+              <input type="email" name="user-block-email" id="user-block-email" placeholder="Электронная почта">
               <label for="user-block-email">Электронная почта</label>
-              <input type="password" name="password" id="password">
+              <input type="password" name="password" id="password" placeholder="Пароль">
               <label for="password">Пароль</label>
               <input type="submit" class="login-btn" value="Войти">
               <div class="forget-new">
@@ -45,23 +45,27 @@
                 <a class="forget-new-link" href="#">Новая регистрация</a>
               </div>
             </form>
-          <a class="basket" href="#">2 товара</a>
-            <table class="table-basket">
+          <a class="basket-full" href="#">2 товара</a>
+            <div class="table-basket">
+            <table>
               <tr>
-                <td><a class="table" href="#">Крестик</a></td>
+                <td><a class="table-link" href="#"></a></td>
                 <td><img src="img/item-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-                <td>Пломбир с апельсиновым джемом</td>
+                <td class="table-tr-title">Пломбир с апельсиновым джемом</td>
                 <td>1,5 кг х 200 руб.</td>
                 <td>300 руб.</td>
               </tr>
               <tr>
-              <td><a class="table" href="#">Крестик</a></td>
+              <td><a class="table-link" href="#"></a></td>
               <td><img src="img/item-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td class="table-tr-title">Клубничный пломбир с присыпкой из белого шоколада</td>
               <td>1,5 кг х 300 руб.</td>
               <td>450 руб.</td>
               </tr>
             </table>
+            <span>Итого: 750 руб.</span>
+            <a class="btn" href="#">Оформить заказ</a>
+          </div>
         </div>
         <div class="time-work">
           <p>с 10 до 20, ежедневно<br>
@@ -89,8 +93,9 @@
             <label for="sorting">Сортировка:</label>
             <select class="sorting" name="sorting" id="sorting">
               <option value="1">по популярности</option>
-              <option value="2">По цене</option>
-              <option value="3">По ...</option>
+              <option value="2">сначала недорогие</option>
+              <option value="3">сначала дорогие</option>
+              <option value="4">по жирности</option>
             </select>
           </div>
           <div class="filter-group">
@@ -254,7 +259,7 @@
             </article>
             <ul class="pagination">
                 <li>
-                  1
+                  <a>1</a>
                 </li>
                 <li>
                   <a href="#">2</a>
@@ -284,7 +289,7 @@
     </section>
     <div class="footer-menu">
       <div class="footer-menu-item">
-        <a class="heart-icon" href="#"><b>Для поставщиков</b></a>
+        <a class="heart-icon" href="#"><span>Для поставщиков</span></a>
         <a href="#">О производстве</a>
       </div>
       <div class="footer-menu-item">

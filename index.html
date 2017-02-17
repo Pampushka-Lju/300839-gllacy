@@ -14,21 +14,21 @@
 
     <div class="site-wrapper">
       <div class="content-wrapper clearfix">
-    <header class="main-header">
+    <header class="main-header clearfix">
 
         <div class="logo">
-          <img src="img/logo.png" width="154" height="70" alt="Магазин «Глейси»">
+          <img src="img/logo.png" width="154" height="64" alt="Магазин «Глейси»">
         </div>
         <nav class="main-navigation">
-          <ul>
-            <li class="active">
-              <a href="#">Каталог</a>
+          <ul class="main-navigation-list">
+            <li class="has-submenu">
+              <a class="main-navigation-link" href="#">Каталог</a>
               <ul class="subnav">
                 <li class="subnav-item">
                   <a class="subnav-link" href="#"><b>Новинки</b></a>
                 </li>
                 <li class="subnav-item">
-                  <a class="subnav-link" href="#">Сливочное</a>
+                  <a class="subnav-link active" href="#">Сливочное</a>
                 </li>
                 <li class="subnav-item">
                   <a class="subnav-link" href="#">Щербеты</a>
@@ -42,21 +42,21 @@
               </ul>
             </li>
             <li>
-              <a href="#">Доставка и оплата</a>
+              <a class="main-navigation-link" href="#">Доставка и оплата</a>
             </li>
             <li>
-              <a href="#">О Компании</a>
+              <a class="main-navigation-link" href="#">О Компании</a>
             </li>
           </ul>
         </nav>
         <div class="user-block">
-          <a class="search" href="#">Поиск</a>
-            <form class="search" action="/echo" method="get">
+          <a class="search" href="#"></a>
+            <form class="search-form" action="/echo" method="get">
               <input type="search" name="search" id="search" placeholder="Что ищем?">
               <label for="search">Что ищем?</label>
             </form>
           <a class="login" href="#">Вход</a>
-            <form class="login" action="/echo" method="post">
+            <form class="login-form" action="/echo" method="post">
               <input type="email" name="user-block-email" id="user-block-email" placeholder="Электронная почта">
               <label for="user-block-email">Электронная почта</label>
               <input type="password" name="password" id="password" placeholder="Пароль">
@@ -193,9 +193,9 @@
           <div class="feedback-form">
             <p class="feedback-form-tip">
               Адрес главного офиса и офлайн магазина:
-              <b>ул.Большая Конюшенная19/8, Санкт-Петербург</b><br>
-              Для заказов по телефону:<b>8 812 450-25-25</b>(с 10 до 20 ежедневно)</p>
-              <a class="feedback-link" href="#">Форма обратной связи"</a>
+              <b>ул.Большая Конюшенная 19/8, Санкт-Петербург</b><br>
+              Для заказов по телефону:<b>8 812 450-25-25 </b>(с 10 до 20 ежедневно)</p>
+              <a class="btn" href="#">Форма обратной связи</a>
           </div>
         <div class="footer-bottom">
         <section class="footer-social">
@@ -206,7 +206,7 @@
         </section>
         <div class="footer-menu">
           <div class="footer-menu-item">
-            <a class="heart-icon" href="#"><b>Для поставщиков</b></a>
+            <a class="heart-icon" href="#"><span>Для поставщиков</span></a>
             <a href="#">О производстве</a>
           </div>
           <div class="footer-menu-item">
@@ -235,10 +235,10 @@
         </div>
         <div class="overlay-massage">
           <label for="massage"></label>
-          <textarea id="massage">Напишите что-нибудь..."</textarea>
+          <textarea id="massage">Напишите что-нибудь...</textarea>
         </div>
       </form>
-      <input type="submit" class="overlay-btn" value="Отправить">
+      <input class="btn" type="submit" class="overlay-btn" value="Отправить">
     </div>
 
   </body>
