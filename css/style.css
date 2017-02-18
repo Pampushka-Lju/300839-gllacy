@@ -75,7 +75,7 @@ h2 {
 
 .slider {
   position: relative;
-  padding-top: 382px;
+  padding-top: 276px;
   text-align: center;
   color: #ffffff;
 }
@@ -95,7 +95,7 @@ h2 {
 
 .slide-btn {
   display: inline-block;
-  padding: 10px 42px;
+  padding: 12px 45px;
 
   font-weight: 600;
   font-size: 31px;
@@ -147,6 +147,11 @@ h2 {
   cursor: pointer;
 }
 
+.slider-controls label:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+
 #btn-1:checked ~ .site-wrapper #slide1,
 #btn-2:checked ~ .site-wrapper #slide2,
 #btn-3:checked ~ .site-wrapper #slide3 {
@@ -197,7 +202,7 @@ h2 {
 
 .main-navigation, .main-navigation-list {
   margin: 0;
-  padding: 0;
+  padding: 6px 0;
   list-style: none;
   font-size: 0;
 }
@@ -216,18 +221,36 @@ h2 {
   display: block;
   padding: 7px 14px;
   color: #ffffff;
+}
+
+.main-navigation-link-active {
+  background: #d07058;
+  border-radius: 15px;
+  color: #323232;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.main-navigation-link-active:hover {
+  background: #f7f6f3;
+  border-radius: 15px;
+  color: #323232;
+  margin-bottom: 5px;
   text-decoration: none;
 }
 
 .main-navigation-link:hover {
   background: #f7f6f3;
   border-radius: 15px;
-  color: #000000;
+  color: #323232;
   margin-bottom: 5px;
+  text-decoration: none;
 }
 
 .main-navigation-link:active {
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+  background: #ededed;
+  box-shadow: inset 0px 2px 1px 0px #696969;
+  text-decoration: none;
 }
 
 .subnav {
@@ -293,6 +316,7 @@ h2 {
 .user-block {
   float: right;
   max-width: 300px;
+  margin: 14px 0px;
 }
 
 .user-block > a {
@@ -314,13 +338,12 @@ h2 {
   color: #000000;
 }
 
-
 .search {
-  width: 4px;
-  height: 15px;
+  width: 5px;
+  height: 18px;
   padding: 7px 14px;
   border-radius: 20px;
-  margin-right: 12px;
+  margin-right: 6px;
 }
 
 .search::before {
@@ -339,8 +362,8 @@ h2 {
 }
 
 .login {
-  padding: 7px 20px 7px 44px;
-  margin-right: 14px;
+  padding: 7px 16px 7px 44px;
+  margin-right: 6px;
 }
 
 .login::before {
@@ -367,7 +390,7 @@ h2 {
   content: "";
   position: absolute;
   top: 15px;
-  left: 22px;
+  left: 28px;
   transform: translate(-50%, -50%);
   width: 21px;
   height: 20px;
@@ -410,7 +433,7 @@ background-position: -5px -35px;
 
 .table-basket {
   position: absolute;
-  top: 44px;
+  top: 62px;
   right: 100px;
   width: 540px;
   min-height: 240px;
@@ -444,7 +467,6 @@ background-position: -5px -35px;
     height: 1px;
     background-color: #323232;
 }
-
 
 .table-basket td {
   vertical-align: middle;
@@ -515,14 +537,14 @@ background-position: -5px -35px;
   background: transparent;
 }
 
-.basket-full:hover + .table-basket {
+.basket-full:hover + .table-basket, .table-basket:hover {
   opacity: 1;
   visibility: visible;
 }
 
 .search-form {
   position: absolute;
-  top: 44px;
+  top: 62px;
   right: 350px;
   width: 340px;
   margin: 0 auto;
@@ -532,6 +554,7 @@ background-position: -5px -35px;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+  z-index: 1;
 }
 
 .search::after {
@@ -545,14 +568,14 @@ background-position: -5px -35px;
   background: transparent;
 }
 
-.search:hover + .search-form {
+.search:hover + .search-form, .search-form:hover {
   opacity: 1;
   visibility: visible;
 }
 
 .login-form {
   position: absolute;
-  top: 44px;
+  top: 62px;
   right: 240px;
   width: 340px;
   margin: 0 auto;
@@ -562,6 +585,7 @@ background-position: -5px -35px;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+  z-index: 10;
 }
 
 .login::after {
@@ -575,7 +599,7 @@ background-position: -5px -35px;
   background: transparent;
 }
 
-.login:hover + .login-form {
+.login:hover + .login-form, .login-form:hover {
   opacity: 1;
   visibility: visible;
 }
@@ -605,6 +629,7 @@ input[type="email"], input[type="password"], input[type="text"] {
  height: 44px;
  margin-bottom: 20px;
  border-radius: 6px;
+ padding-left: 20px;
  color: #a0a0a0;
 }
 
@@ -638,6 +663,10 @@ input[type="email"], input[type="password"], input[type="text"] {
   font-weight: normal;
 }
 
+.forget-new a:hover {
+  color: #e84d37;
+}
+
 .user-block input:focus {
   border: 2px solid #8fbdec;
   border-radius: 10px;
@@ -649,6 +678,10 @@ input[type="email"], input[type="password"], input[type="text"] {
 
 .time-work {
   float: right;
+}
+
+.time-work p {
+  margin: 0;
 }
 
 .time-work b {
@@ -705,7 +738,7 @@ input[type="email"], input[type="password"], input[type="text"] {
 .promo-item {
   float: left;
   width: 420px;
-  height: 230px;
+  height: 229px;
   margin-right: 20px;
   margin-bottom: 40px;
   padding: 14px 20px 14px 18px;
@@ -715,6 +748,11 @@ input[type="email"], input[type="password"], input[type="text"] {
   font-weight: bold;
   box-sizing: border-box;
   background: #7d0e2e url("../img/raspberry.png") no-repeat;
+}
+
+.promo-item p {
+  margin-top: 18px;
+  margin-bottom: 22px;
 }
 
 .promo-item:last-child {
@@ -727,6 +765,7 @@ input[type="email"], input[type="password"], input[type="text"] {
   line-height: 41px;
   font-weight: bold;
 }
+
 
 .btn {
   text-align: center;
@@ -763,6 +802,7 @@ input[type="email"], input[type="password"], input[type="text"] {
 
 .promo-btn {
   float: right;
+  padding: 10px 23px;
 }
 
 .catalog-filter {
@@ -904,12 +944,12 @@ input[type="radio"]{
   border-radius: 50%;
 	}
 
-  input[type=radio]:checked + label::before {
-	    content: "\2022";
-	    color: #f3f3f3;
-	    font-size: 50px;
-      line-height: 23px;
-	    text-align: center;
+input[type=radio]:checked + label::before {
+  content: "\2022";
+	color: #f3f3f3;
+	font-size: 50px;
+  line-height: 23px;
+	text-align: center;
 }
 
   .filter-group:nth-child(4) {
@@ -979,13 +1019,12 @@ input[type="radio"]{
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
 }
 
-
 .catalog {
   min-height: 280px;
   float: left;
   width: 860px;
   font-size: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .catalog-item {
@@ -994,6 +1033,7 @@ input[type="radio"]{
   vertical-align: top;
   width: 200px;
   margin-right: 20px;
+  padding-bottom: 20px;
   font-size: 16px;
   line-height: 22px;
   text-decoration: underline;
@@ -1016,7 +1056,7 @@ input[type="radio"]{
   top: -10px;
   left: -10px;
   width: 220px;
-  height: 370px;
+  height: 364px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 6px;
   background-position: -1px -15px;
@@ -1034,7 +1074,7 @@ input[type="radio"]{
   padding: 15px 0;
   width: 200px;
   position: absolute;
-  top: 300px;
+  top: 285px;
   left: 50%;
   transform: translate(-50%);
 }
@@ -1094,7 +1134,7 @@ input[type="radio"]{
 .features {
   float: left;
   width: 860px;
-  min-height: 374px;
+  min-height: 372px;
   margin-bottom: 40px;
   padding-left: 20px;
   font-family: "Roboto", "Arial", sans-serif;
@@ -1108,19 +1148,25 @@ input[type="radio"]{
 }
 
 .features-title {
+  display: block;
+  width: 720px;
   font-size: 24px;
   line-height: 30px;
   font-weight: medium;
   color: #323232;
+  margin-top: 24px;
+margin-bottom: 22px;
 }
 
 .features-item {
   float: left;
   position: relative;
   width: 400px;
-  min-height: 150px;
+  min-height: 120px;
   padding-left: 55px;
   box-sizing: border-box;
+  margin-bottom: 12px;
+
 }
 
 .features-item:nth-child(2n) {
@@ -1130,7 +1176,7 @@ input[type="radio"]{
 .feature-technology::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 0;
   width: 49px;
   height: 49px;
@@ -1141,7 +1187,7 @@ input[type="radio"]{
 .feature-ecomilk::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -12px;
   left: 0;
   width: 48px;
   height: 49px;
@@ -1152,7 +1198,7 @@ input[type="radio"]{
 .feature-quality::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 0;
   width: 49px;
   height: 49px;
@@ -1163,7 +1209,7 @@ input[type="radio"]{
 .feature-thermopack::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -12px;
   left: 0;
   width: 48px;
   height: 49px;
@@ -1190,7 +1236,8 @@ input[type="radio"]{
 
 .blog-preview b {
   display: block;
-  margin-top: 26px;
+  margin-top: 24px;
+  margin-bottom: 4px;
 }
 
 .blog-preview a {
@@ -1201,6 +1248,14 @@ input[type="radio"]{
   color: #353535;
   background: rgba(255,255,255,0.8);
   box-sizing: border-box;
+}
+
+.blog-preview a:hover {
+  color: #e84d37;
+}
+
+.blog-preview span {
+  display: block;
 }
 
 .subscribe {
@@ -1221,10 +1276,10 @@ input[type="radio"]{
 .subscribe::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 4px;
+  left: 6px;
   width: 408px;
-  height: 209px;
+  height: 212px;
   border-radius: 15px;
   background: #f8f7f4;
   z-index: -1;
@@ -1232,20 +1287,20 @@ input[type="radio"]{
 
 .subscribe .email {
   background-color: #ffffff;
-  border: 2px solid #d3d3d2;
-  width: 228px;
-  height: 44px;
-  border-radius: 10px;
-  padding-left: 16px;
+  border: 1px solid #d3d3d2;
+  width: 212px;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 15px;
   color: #a0a0a0;
 }
 
 .subscribe p {
-  margin: 20px 24px;
+  margin: 33px 26px 16px 26px;
 }
 
 .subscribe input {
-  margin-left: 24px;
+  margin-left: 26px;
 }
 
 .subscribe input:focus {
@@ -1259,7 +1314,7 @@ input[type="radio"]{
 
 .subscribe .btn {
   padding: 0;
-  margin-left: 12px;
+  margin-left: 8px;
   width: 128px;
   height: 44px;
 }
@@ -1272,7 +1327,7 @@ input[type="radio"]{
 
 .pagination {
   position: relative;
-  margin: 50px 40px;
+  margin: 70px 40px 10px 0;
   font-size: 0;
   text-align: right;
 }
@@ -1281,7 +1336,7 @@ input[type="radio"]{
   content: "";
   position: absolute;
   top: 10px;
-  left: 535px;
+  left: 620px;
   width: 12px;
   height: 12px;
   box-shadow: 2px 2px  0 #ffffff;
@@ -1307,13 +1362,13 @@ input[type="radio"]{
   width: 30px;
   color: #ffffff;
   line-height: 30px;
-  margin-left: 15px;
+  margin-left: 5px;
   text-align: center;
 }
 
 .pagination li:hover {
   color: #000000;
-  background: #fff;
+  background: rgba(255,255,255,0.2);
   border-radius: 50%;
 }
 
@@ -1343,14 +1398,13 @@ input[type="radio"]{
   margin: 0;
   padding-top: 32px;
   padding-bottom: 25px;
-  padding-left: 20px;
   font-size: 0px;
 }
 
 .feedback-form {
   position: absolute;
   right: 0;
-  top: -360px;
+  top: -368px;
   margin: 0;
   padding: 10px 20px;
   width: 300px;
@@ -1360,15 +1414,15 @@ input[type="radio"]{
   line-height: 20px;
   font-weight: normal;
   color: #323232;
-  border-radius: 5px;
+  border-radius: 10px;
   box-sizing: border-box;
 }
 
 .feedback-form .btn {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
-}
+  bottom: 32px;
+  left: 23px;
+  padding: 10px 28px;}
 
 .feedback-form b {
   display: block;
@@ -1379,6 +1433,8 @@ input[type="radio"]{
 
 .feedback-form p {
   display: block;
+  padding-top: 18px;
+  padding-left: 3px;
 }
 
 
@@ -1398,7 +1454,7 @@ input[type="radio"]{
   display: inline-block;
   width: 38px;
   height: 38px;
-  margin: 0 5px;
+  margin: 0 3px;
   font-size: 0;
   vertical-align: top;
   text-decoration: none;
@@ -1441,16 +1497,17 @@ input[type="radio"]{
 }
 
 .footer-menu-item:first-child {
-  padding-left: 50px;
+  padding-left: 59px;
+  width: 140px;
 }
 
 .heart-icon::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 30px;
-  width: 15px;
-  height: 13px;
+  left: 36px;
+  width: 18px;
+  height: 20px;
   background: url("../img/sprite.png") no-repeat;
   background-position: -5px -171px;
 }
@@ -1469,8 +1526,8 @@ input[type="radio"]{
 .footer-copyright::before {
   content: "";
   position: absolute;
-  top: -40px;
-  left: 0;
+  top: -36px;
+  left: 30px;
   width: 110px;
   height: 38px;
   background: url("../img/html.png") no-repeat;
