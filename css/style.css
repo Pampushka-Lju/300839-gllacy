@@ -987,6 +987,8 @@ input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="
   vertical-align: top;
   width: 398px;
   margin-right: 13px;
+  padding-left: 20px;
+
 }
 
 .filter-radio label {
@@ -1000,7 +1002,7 @@ input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="
 }
 
 .filter-radio-wrapper {
-  width: 100%;
+  width: 398px;
   height: 36px;
   border-radius: 15px;
   padding-left: 20px;
@@ -1046,7 +1048,7 @@ input[type="radio"]{
 }
 
 .filter-checkbox-wrapper {
-  width: 670px;
+  width: 684px;
   height: 36px;
   border-radius: 20px;
   padding-left: 17px;
@@ -1414,7 +1416,7 @@ padding: 0;
 
 .pagination {
   position: relative;
-  margin: 70px 0 10px 0;
+  margin: 48px -10px 10px 0;
   font-size: 0;
   text-align: right;
 }
