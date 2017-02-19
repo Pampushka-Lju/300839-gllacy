@@ -625,6 +625,7 @@ h2 {
   padding-left: 16px;
   border-radius: 6px;
   color: #a0a0a0;
+  box-sizing: border-box;
 }
 
 input[type="search"]:hover {
@@ -666,14 +667,19 @@ input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="
 }
 
 
-.login-btn {
+.user-blok .login-btn {
   width: 100px;
   height: 44px;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
+  padding-top: 8px;
   color: #ffffff;
   cursor: pointer;
+}
+
+.user-blok .login-btn:active {
+  border: none;
 }
 
 
@@ -694,11 +700,6 @@ input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="
 
 .forget-new a:hover {
   color: #e84d37;
-}
-
-.user-block input:focus {
-  border: 2px solid #8fbdec;
-  border-radius: 10px;
 }
 
 .user-block label {
@@ -852,6 +853,11 @@ input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="
   padding: 10px 23px;
 }
 
+.inner-main-catalog {
+  margin-top: -10px;
+}
+
+
 .inner-main h1 {
   margin-bottom: 24px;
 }
@@ -859,10 +865,10 @@ input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="
 .inner-main-catalog h2, .inner-main-catalog label {
   margin: 0;
   padding-left: 16px;
+  margin-bottom: 5px;
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
-
 }
 
 .price-controls label {
@@ -873,7 +879,7 @@ input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="
   font-size: 0px;
   min-height: 70px;
   width: 860px;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 
 .filter-group {
@@ -934,7 +940,7 @@ input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="
 
 .range-controls {
   position: relative;
-  min-width: 194px;
+  min-width: 215px;
   height: 36px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
@@ -979,8 +985,8 @@ input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="
 .filter-group:nth-child(3) {
   display: inline-block;
   vertical-align: top;
-  width: 420px;
-  margin-right: 10px;
+  width: 398px;
+  margin-right: 13px;
 }
 
 .filter-radio label {
@@ -1043,7 +1049,7 @@ input[type="radio"]{
   width: 670px;
   height: 36px;
   border-radius: 20px;
-  padding-left: 20px;
+  padding-left: 17px;
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
@@ -1059,7 +1065,7 @@ input[type="radio"]{
   cursor: pointer;
   padding-left: 35px;
   padding-top: 7px;
-  margin-right: 17px;
+  margin-right: 26px;
 }
 
 .filter-checkbox label::before {
@@ -1089,8 +1095,8 @@ input[type="radio"]{
 .btn-transparent {
   display: inline-block;
   vertical-align: middle;
-  margin: 17px 17px;
-  padding: 6px 29px;
+  margin: 21px 0 0 36px;;
+  padding: 6px 28px;
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
@@ -1128,7 +1134,7 @@ input[type="radio"]{
   vertical-align: top;
   width: 200px;
   margin-right: 20px;
-  padding-bottom: 17px;
+  padding-bottom: 36px;
   font-size: 16px;
   line-height: 22px;
   text-decoration: underline;
@@ -1264,7 +1270,7 @@ padding: 0;
   float: left;
   position: relative;
   width: 420px;
-  height: 132px;
+  min-height: 132px;
   padding-left: 77px;
   box-sizing: border-box;
 }
@@ -1379,13 +1385,13 @@ padding: 0;
 
 .subscribe input[type="email"]:hover {
   border: 2px solid #d3d3d2;
-  padding-left: 14px;
+  padding-left: 12px;
 }
 
 .subscribe input[type="email"]:focus {
   border: 2px solid #2e88e4;
   border-radius: 5px;
-  padding-left: 14px;
+  padding-left: 12px;
 }
 
 .subscribe label {
@@ -1403,7 +1409,7 @@ padding: 0;
 .map {
   width: 100%;
   height: 430px;
-  background: url("../img/map.jpg") no-repeat center;
+  background: #e8e5d5 url("../img/map.jpg") no-repeat center;
 }
 
 .pagination {
@@ -1421,8 +1427,8 @@ padding: 0;
 .pagination::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 632px;
+  top: 9px;
+  left: 675px;
   width: 12px;
   height: 12px;
   box-shadow: 2px 2px  0 #ffffff;
@@ -1433,7 +1439,7 @@ padding: 0;
 .pagination::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 9px;
   right: 16px;
   width: 12px;
   height: 12px;
@@ -1519,6 +1525,7 @@ padding: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
+  margin-bottom: 7px;
 }
 
 .contacts p {
@@ -1788,8 +1795,20 @@ padding: 0;
   margin-bottom: 20px;
 }
 
+.feedback-form input[type="text"] {
+  background-color: #ffffff;
+  border: 1px solid #d3d3d2;
+  width: 224px;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 4px 14px;
+  border-radius: 6px;
+  color: #a0a0a0;
+}
+
+
 .feedback-form-massage textarea {
-  padding: 10px 19px;
+  padding: 10px 14px;
   color: #b4b4b4;
   width: 428px;
   height: 150px;
@@ -1801,6 +1820,8 @@ padding: 0;
 
 .feedback-form textarea:hover {
   border: 2px solid #d3d3d2;
+  padding: 9px 13px;
+
 }
 
 .feedback-form textarea:focus {
@@ -1808,13 +1829,25 @@ padding: 0;
   border-radius: 5px;
 }
 
-.feedback-form input[type="text"]:hover, .feedback-form input[type="email"]:hover {
+.feedback-form input[type="email"]:hover {
   border: 2px solid #d3d3d2;
 }
 
-.feedback-form input[type="text"]:focus, .feedback-form input[type="email"]:focus {
+.feedback-form input[type="text"]:hover {
+  padding: 3px 13px;
+  border: 2px solid #d3d3d2;
+}
+
+.feedback-form input[type="email"]:focus {
   border: 2px solid #8fbdec;
   border-radius: 5px;
+}
+
+.feedback-form input[type="text"]:focus {
+  border: 2px solid #8fbdec;
+  border-radius: 5px;
+  padding: 3px 13px;
+
 }
 
 .feedback-form .btn {
