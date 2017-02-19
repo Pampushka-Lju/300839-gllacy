@@ -129,7 +129,7 @@ h2 {
 
 .slider-controls {
   position: absolute;
-  bottom: 22px;
+  bottom: 23px;
   left: 0;
   z-index: 20;
   font-size: 0;
@@ -183,7 +183,6 @@ h2 {
   width: 860px;
   margin: 0 auto;
   padding: 0 20px;
-
 }
 
 .logo {
@@ -215,7 +214,6 @@ h2 {
   font-weight: bold;
   line-height: 18px;
 }
-
 
 .main-navigation a {
   display: block;
@@ -568,6 +566,7 @@ h2 {
   opacity: 0;
   transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
   z-index: 1;
+  box-sizing: border-box;
 }
 
 .search::after {
@@ -631,12 +630,12 @@ h2 {
 input[type="search"]:hover {
   border: 2px solid #d3d3d2;
   padding-left: 15px;
-}
+ }
 
 input[type="search"]:focus {
   border: 2px solid #2e88e4;
   padding-left: 15px;
-}
+ }
 
 .login-form {
   width: 278px;
@@ -645,7 +644,7 @@ input[type="search"]:focus {
   box-sizing: border-box;
 }
 
-input[type="email"], input[type="password"], input[type="text"] {
+input[type="email"], input[type="password"], .user-blok input[type="text"] {
  background-color: #ffffff;
  border: 1px solid #d3d3d2;
  width: 224px;
@@ -656,12 +655,12 @@ input[type="email"], input[type="password"], input[type="text"] {
  color: #a0a0a0;
 }
 
-input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover {
+input[type="email"]:hover, input[type="password"]:hover, .user-blok input[type="text"]:hover {
   border: 2px solid #d3d3d2;
   padding: 3px 9px;
 }
 
-input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+input[type="email"]:focus, input[type="password"]:focus, .user-blok input[type="text"]:focus {
   border: 2px solid #2e88e4;
   padding: 3px 9px;
 }
@@ -711,15 +710,26 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .time-work p {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
   margin: 0;
 }
+
+.time-work .time {
+  padding-left: 18px;
+  padding-bottom: 6px
+}
+
 
 .time-work b {
   font-size: 22px;
   line-height: 24px;
 }
 
-.inner-main {
+
+
+.inner-main.catalog {
   margin-top: -18px;
 }
 
@@ -846,11 +856,18 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   margin-bottom: 24px;
 }
 
-.inner-main h2 {
+.inner-main-catalog h2, .inner-main-catalog label {
   margin: 0;
-  padding: 0;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+
 }
 
+.price-controls label {
+  padding: 0;
+}
 
 .catalog-filter {
   font-size: 0px;
@@ -861,21 +878,17 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 
 .filter-group {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   position: relative;
   width: 200px;
   margin-right: 12px;
+  margin-bottom: 18px;
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
   box-sizing: border-box;
 }
 
-.filter-group h2, label {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: normal;
-}
 
 .sorting {
   width: 192px;
@@ -900,7 +913,6 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
   display: inline-block;
   font-size: 14px;
   line-height: 16px;
-  padding-right: 5px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -913,6 +925,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 .price-controls input {
   width: 52px;
   margin: 0;
+  padding: 0;
   color: inherit;
   font: inherit;
   background: none;
@@ -1022,12 +1035,12 @@ input[type="radio"]{
   .filter-group:nth-child(4) {
     display: inline-block;
     vertical-align: top;
-    width: 704px;
+    width: 670px;
     margin-right: 10px;
 }
 
 .filter-checkbox-wrapper {
-  width: 100%;
+  width: 670px;
   height: 36px;
   border-radius: 20px;
   padding-left: 20px;
@@ -1075,9 +1088,9 @@ input[type="radio"]{
 
 .btn-transparent {
   display: inline-block;
-  vertical-align: bottom;
-  margin: 0 auto;
-  padding: 8px 29px;
+  vertical-align: middle;
+  margin: 17px 17px;
+  padding: 6px 29px;
   font-size: 16px;
   line-height: 18px;
   font-weight: normal;
@@ -1106,7 +1119,7 @@ input[type="radio"]{
   float: left;
   width: 860px;
   font-size: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .catalog-item {
@@ -1160,7 +1173,9 @@ input[type="radio"]{
   top: 289px;
   left: 50%;
   transform: translate(-50%);
+  display: none;
 }
+
 
 
 .catalog-item:hover::before {
@@ -1221,21 +1236,24 @@ input[type="radio"]{
   font-weight: normal;
   color: #323232;
   padding-right: 20px;
+  padding-bottom: 16px;
   box-sizing: border-box;
   border-radius: 15px;
   background: #e9ddc1 url("../img/pattern.png") repeat;
 }
 
-.features p {
-  padding-top: 5px;
+.features h2 {
+margin: 24px 19px 8px;
+padding: 0;
 }
+
 
 .features-title {
   display: block;
   width: 720px;
   font-size: 24px;
   line-height: 30px;
-  font-weight: medium;
+  font-weight: normal;
   color: #323232;
   margin-top: 24px;
   margin-bottom: 8px;
@@ -1246,6 +1264,7 @@ input[type="radio"]{
   float: left;
   position: relative;
   width: 420px;
+  height: 132px
   padding-left: 77px;
   box-sizing: border-box;
 }
@@ -1253,7 +1272,7 @@ input[type="radio"]{
 .features-item::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 21px;
   width: 49px;
   height: 49px;
@@ -1344,14 +1363,14 @@ input[type="radio"]{
 .subscribe .email {
   background-color: #ffffff;
   border: 1px solid #d3d3d2;
-  width: 212px;
-  height: 40px;
+  width: 204px;
+  height: 35px;
   border-radius: 5px;
-  padding-left: 15px;
+  padding-left: 13px;
 }
 
 .subscribe p {
-  margin: 33px 26px 16px 26px;
+  margin: 35px 26px 15px 26px;
 }
 
 .subscribe input {
@@ -1464,7 +1483,6 @@ input[type="radio"]{
   border-radius: 50%;
 }
 
-
 .main-footer {
   position: relative;
   margin: 0;
@@ -1486,7 +1504,7 @@ input[type="radio"]{
   line-height: 20px;
   font-weight: normal;
   color: #323232;
-  border-radius: 10px;
+  border-radius: 15px;
   box-sizing: border-box;
 }
 
@@ -1505,8 +1523,10 @@ input[type="radio"]{
 
 .contacts p {
   display: block;
-  padding-top: 5px;
-  padding-left: 3px;
+}
+
+.contacts-tip-adress {
+  width: 152px;
 }
 
 .main-footer {
@@ -1668,7 +1688,7 @@ input[type="radio"]{
   content: "";
   position: absolute;
   top: -37px;
-  left: 30;
+  left: 30px;
   width: 109px;
   height: 38px;
   background: url("../img/html.png") no-repeat;
