@@ -53,15 +53,19 @@
         <div class="user-block">
           <a class="search" href="#"></a>
             <form class="search-form" action="/echo" method="get">
-              <input type="search" name="search" id="search" placeholder="Что ищем?">
+              <input type="search" name="search" id="search">
               <label for="search">Что ищем?</label>
             </form>
           <a class="login" href="#">Вход</a>
             <form class="login-form" action="/echo" method="post">
-              <input type="email" name="user-block-email" id="user-block-email" placeholder="Электронная почта">
-              <label for="user-block-email">Электронная почта</label>
-              <input type="password" name="password" id="password" placeholder="Пароль">
-              <label for="password">Пароль</label>
+              <div class="login-form-wrapper">
+                <input type="email" name="user-block-email" id="user-block-email">
+                <label for="user-block-email">Электронная почта</label>
+              </div>
+              <div class="login-form-wrapper">
+                <input type="password" name="password" id="password" >
+                <label for="password">Пароль</label>
+              </div>
               <input type="submit" class="btn login-btn" value="Войти">
               <div class="forget-new">
                 <a class="forget-new-link" href="#">Забыли пароль?</a>
@@ -117,7 +121,7 @@
             310 <span>/кг</span>
           </div>
           <div class="catalog-item-name">
-            Сливочное с<span> апельсиновым джемом </span>и цитрусовой стружкой
+            Сливочное с апельсиновым джемом и цитрусовой стружкой
           </div>
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
@@ -127,7 +131,7 @@
             380 <span>/кг</span>
           </div>
           <div class="catalog-item-name">
-            Сливочно-кофейное с кусочками <span>шоколада</span>
+            Сливочно-кофейное с кусочками шоколада
           </div>
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
@@ -137,7 +141,7 @@
               355 <span>/кг</span>
             </div>
           <div class="catalog-item-name">
-            Сливочно-клубничное с<span> присыпкой из белого шоколада</span>
+            Сливочно-клубничное с присыпкой из белого шоколада
           </div>
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
@@ -147,7 +151,7 @@
               415 <span>/кг</span>
             </div>
           <div class="catalog-item-name">
-            Сливочное крем-брюле с <span> карамельной подливкой</span>
+            Сливочное крем-брюле с карамельной подливкой
           </div>
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
@@ -175,7 +179,7 @@
         <article class="blog-preview">
           <b class="blog-title">Новое в нашем блоге</b>
             <a class="blog-link" href="#">
-              10 способов сервировки <span>фруктовых щербетов к </span>столу
+              10 способов сервировки фруктовых щербетов к столу
             </a>
         </article>
         <div class="subscribe">
@@ -189,8 +193,8 @@
       </section>
     </main>
   </div>
-
       <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104370521!2d30.320889251959244!3d59.93879418178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1487691614503" width="900" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="content-wrapper clearfix">
         <footer class="main-footer">
@@ -198,8 +202,8 @@
             <p class="contacts-tip">
               <p class="contacts-tip-adress">Адрес главного офиса и офлайн магазина:</p>
               <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-              Для заказов по телефону:<b>8 812 450-25-25 </b>(с 10 до 20 ежедневно)
-              <a class="btn" href="#">Форма обратной связи</a>
+              Для заказов по телефону:<b class="phone">8 812 450-25-25 </b>(с 10 до 20 ежедневно)
+              <a class="btn" href="feedback.html">Форма обратной связи</a>
           </div>
         <div class="footer-bottom">
         <section class="footer-social">
@@ -211,15 +215,15 @@
         <div class="footer-menu">
           <div class="footer-menu-item">
             <a class="heart-icon" href="#"><span>Для поставщиков</span></a>
-            <a href="#">О производстве</a>
+            <a class="footer-menu-second" href="#">О производстве</a>
           </div>
           <div class="footer-menu-item">
             <a href="#">Наши документы</a>
-            <a href="#">Экологические стандарты</a>
+            <a class="footer-menu-second" href="#">Экологические стандарты</a>
           </div>
         </div>
         <section class="footer-copyright">
-          Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> 2017
+          Сделано в <a href="https://htmlacademy.ru">HTML Academy </a><span>&#169;</span> 2017
         </section>
       </div>
       </footer>

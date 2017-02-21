@@ -87,9 +87,8 @@
           </div>
         </div>
         <div class="time-work">
-          <p>с 10 до 20, ежедневно<br>
-          <b>8 812 450-25-25</b>
-          </p>
+          <p class="time">с 10 до 20, ежедневно</p>
+          <p><b>8 812 450-25-25</b></p>
         </div>
     </header>
   </div>
@@ -97,7 +96,7 @@
     <main class="inner-main inner-main-catalog">
         <ul class="breadcrumbs">
           <li>
-            <a href="#">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li>
             <a href="#">Каталог</a>
@@ -117,7 +116,7 @@
               <option value="4">по жирности</option>
             </select>
           </div>
-          <div class="filter-group">
+          <div class="filter-group filter-price">
             <div class="price-controls">
               <label class="min-price">Цена: <input type="text" name="min-price" value="100 руб."></label>
               <label class="max-price">&#8211; <input type="text" name="max-price" value="500 руб."></label>
@@ -133,29 +132,29 @@
           <div class="filter-group filter-radio">
               <h2 class="filter-title">Жирность:</h2>
               <div class="filter-radio-wrapper">
-              <input type="radio" name="radio-checked" id="zero" value="0%">
+              <input class="radio-disabled" type="radio" name="radio-checked" id="zero" value="0%">
               <label for="zero">0%</label>
-              <input type="radio" name="radio-checked" id="ten" value="before 10%" checked>
+              <input class="radio-disabled" type="radio" name="radio-checked" id="ten" value="before 10%" checked>
               <label for="ten">до 10%</label>
-              <input type="radio" name="radio-checked" id="thirty" value="before 30%">
+              <input class="radio-disabled" type="radio" name="radio-checked" id="thirty" value="before 30%">
               <label for="thirty">до 30%</label>
-              <input type="radio" name="radio-checked" id="above-thirty" value="above 30%">
+              <input class="radio-disabled" type="radio" name="radio-checked" id="above-thirty" value="above 30%">
               <label for="above-thirty">выше 30%</label>
             </div>
             </div>
             <div class="filter-group filter-checkbox">
               <h2 class="filter-item">Наполнители:</h2>
               <div class="filter-checkbox-wrapper">
-              <input type="checkbox" name="chocolate" id="chocolate" checked>
+              <input class="checkbox-disabled" type="checkbox" name="chocolate" id="chocolate" checked>
               <label for="chocolate">шоколадные</label>
-              <input type="checkbox" name="sugar" id="sugar" checked>
+              <input class="checkbox-disabled" type="checkbox" name="sugar" id="sugar" checked>
               <label for="sugar">сахарные присыпки</label>
-              <input type="checkbox" name="fruit" id="fruit">
+              <input class="checkbox-disabled" type="checkbox" name="fruit" id="fruit">
               <label for="fruit">фрукты</label>
-              <input type="checkbox" name="syrup" id="syrup">
+              <input class="checkbox-disabled" type="checkbox" name="syrup" id="syrup">
               <label for="syrup">сиропы</label>
-              <input type="checkbox" name="jam" id="jam">
-              <label for="jam">джем</label>
+              <input class="checkbox-disabled" type="checkbox" name="jam" id="jam">
+              <label for="jam">джемы</label>
             </div>
             </div>
             <button class="btn-transparent" type="submit">Применить</button>
@@ -167,7 +166,7 @@
                 310 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочное с апельсиновым <span>джемом и цитрусовой стружкой</span>
+                Сливочное с апельсиновым джемом и цитрусовой стружкой
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -177,7 +176,7 @@
                 380 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочно-кофейное с кусочками <span>шоколада</span>
+                Сливочно-кофейное с кусочками шоколада
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -187,7 +186,7 @@
                 355 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочно-клубничное с <span>присыпкой из белого шоколада</span>
+                Сливочно-клубничное с присыпкой из белого шоколада
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -197,7 +196,7 @@
                 415 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочное крем-брюле с <span>карамельной подливкой"</span>
+                Сливочное крем-брюле с карамельной подливкой
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -207,7 +206,7 @@
                 325 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочное с брусничным <span>джемом</span>
+                Сливочное с брусничным джемом
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -217,7 +216,7 @@
                 410 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочно-черничное с цельными <span>ягодами черники</span>
+                Сливочно-черничное с цельными ягодами черники
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -227,7 +226,7 @@
                 375 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочно-лимонное с <span>карамельной присыпкой</span>
+                Сливочно-лимонное с карамельной присыпкой
               </div>
             </article>
             <article class="catalog-item">
@@ -236,7 +235,7 @@
                 320 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочное с шоколадной <span>стружкой"</span>
+                Сливочное с шоколадной стружкой
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -246,7 +245,7 @@
                 440 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочно-ванильное с <span>кусочками шоколада</span>
+                Сливочно-ванильное с кусочками шоколада
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -256,7 +255,7 @@
                 435 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочное с ментоловым <span>сиропом</span>
+                Сливочное с ментоловым сиропом
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -266,7 +265,7 @@
                 355 <span>/кг</span>
               </div>
               <div class="catalog-item-name">
-                Сливочное с кусочками черного <span>шоколада</span>
+                Сливочное с кусочками черного шоколада
               </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
@@ -327,7 +326,7 @@
       </div>
     </div>
     <section class="footer-copyright">
-      Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> 2017
+      Сделано в <a href="https://htmlacademy.ru">HTML Academy </a><span>&#169;</span> 2017
     </section>
   </div>
 
