@@ -9,7 +9,6 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-
     <div class="content-wrapper clearfix">
     <header class="main-header clearfix">
         <a class="logo" href="index.html">
@@ -49,15 +48,19 @@
         <div class="user-block">
           <a class="search" href="#"></a>
             <form class="search-form" action="/echo" method="get">
-              <input type="search" name="search" id="search" placeholder="Что ищем?">
+              <input type="search" name="search" id="search">
               <label for="search">Что ищем?</label>
             </form>
           <a class="login" href="#">Вход</a>
             <form class="login-form" action="/echo" method="post">
-              <input type="email" name="user-block-email" id="user-block-email" placeholder="Электронная почта">
-              <label for="user-block-email">Электронная почта</label>
-              <input type="password" name="password" id="password" placeholder="Пароль">
-              <label for="password">Пароль</label>
+              <div class="login-form-wrapper">
+                <input type="email" name="user-block-email" id="user-block-email">
+                <label for="user-block-email">Электронная почта</label>
+              </div>
+              <div class="login-form-wrapper">
+                <input type="password" name="password" id="password">
+                <label for="password">Пароль</label>
+              </div>
               <input type="submit" class="btn login-btn" value="Войти">
               <div class="forget-new">
                 <a class="forget-new-link" href="#">Забыли пароль?</a>
