@@ -6,14 +6,14 @@
     <title>HTML Academy: Глейси - Каталог</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="content-wrapper clearfix">
     <header class="main-header clearfix">
-        <a class="logo" href="index.html">
-          <img src="img/logo.png" width="154" height="64" alt="Магазин «Глейси»">
-        </a>
+      <a class="logo" href="index.html">
+        <img src="img/logo.png" width="154" height="64" alt="Магазин «Глейси»">
+      </a>
         <nav class="main-navigation">
           <ul class="main-navigation-list">
             <li class="has-submenu">
@@ -35,7 +35,6 @@
                   <a class="subnav-link" href="#">Мелорин</a>
                 </li>
               </ul>
-
             </li>
             <li>
               <a class="main-navigation-link" href="#">Доставка и оплата</a>
@@ -48,17 +47,17 @@
         <div class="user-block">
           <a class="search" href="#"></a>
             <form class="search-form" action="/echo" method="get">
-              <input type="search" name="search" id="search">
+              <input type="search" name="search" id="search" required>
               <label for="search">Что ищем?</label>
             </form>
           <a class="login" href="#">Вход</a>
             <form class="login-form" action="/echo" method="post">
-              <div class="login-form-wrapper">
-                <input type="email" name="user-block-email" id="user-block-email">
+              <div class="form-wrapper">
+                <input type="email" name="user-block-email" id="user-block-email" required>
                 <label for="user-block-email">Электронная почта</label>
               </div>
-              <div class="login-form-wrapper">
-                <input type="password" name="password" id="password">
+              <div class="form-wrapper">
+                <input type="password" name="password" id="password" required>
                 <label for="password">Пароль</label>
               </div>
               <input type="submit" class="btn login-btn" value="Войти">
@@ -78,11 +77,11 @@
                 <td>300 руб.</td>
               </tr>
               <tr>
-              <td><a class="table-link" href="#"></a></td>
-              <td><img src="img/item-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-              <td class="table-tr-title">Клубничный пломбир с присыпкой из белого шоколада</td>
-              <td>1,5 кг х 300 руб.</td>
-              <td>450 руб.</td>
+                <td><a class="table-link" href="#"></a></td>
+                <td><img src="img/item-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                <td class="table-tr-title">Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td>1,5 кг х 300 руб.</td>
+                <td>450 руб.</td>
               </tr>
             </table>
             <span>Итого: 750 руб.</span>
@@ -95,7 +94,7 @@
         </div>
     </header>
   </div>
-  <div class="content-wrapper clearfix">
+  <div class="content-wrapper content-wrapper-catalog  clearfix">
     <main class="inner-main inner-main-catalog">
         <ul class="breadcrumbs">
           <li>
@@ -133,30 +132,30 @@
             </div>
           </div>
           <div class="filter-group filter-radio">
-              <h2 class="filter-title">Жирность:</h2>
-              <div class="filter-radio-wrapper">
-              <input class="radio-disabled" type="radio" name="radio-checked" id="zero" value="0%">
+            <h2 class="filter-title">Жирность:</h2>
+            <div class="filter-radio-wrapper">
+              <input type="radio" name="radio-checked" id="zero" value="0%" disabled>
               <label for="zero">0%</label>
-              <input class="radio-disabled" type="radio" name="radio-checked" id="ten" value="before 10%" checked>
+              <input type="radio" name="radio-checked" id="ten" value="before 10%" checked>
               <label for="ten">до 10%</label>
-              <input class="radio-disabled" type="radio" name="radio-checked" id="thirty" value="before 30%">
+              <input type="radio" name="radio-checked" id="thirty" value="before 30%">
               <label for="thirty">до 30%</label>
-              <input class="radio-disabled" type="radio" name="radio-checked" id="above-thirty" value="above 30%">
+              <input type="radio" name="radio-checked" id="above-thirty" value="above 30%">
               <label for="above-thirty">выше 30%</label>
             </div>
-            </div>
-            <div class="filter-group filter-checkbox">
-              <h2 class="filter-item">Наполнители:</h2>
-              <div class="filter-checkbox-wrapper">
-              <input class="checkbox-disabled" type="checkbox" name="chocolate" id="chocolate" checked>
+          </div>
+          <div class="filter-group filter-checkbox">
+            <h2 class="filter-item">Наполнители:</h2>
+            <div class="filter-checkbox-wrapper">
+              <input type="checkbox" name="chocolate" id="chocolate" checked>
               <label for="chocolate">шоколадные</label>
-              <input class="checkbox-disabled" type="checkbox" name="sugar" id="sugar" checked>
+              <input type="checkbox" name="sugar" id="sugar" checked>
               <label for="sugar">сахарные присыпки</label>
-              <input class="checkbox-disabled" type="checkbox" name="fruit" id="fruit">
+              <input type="checkbox" name="fruit" id="fruit" disabled>
               <label for="fruit">фрукты</label>
-              <input class="checkbox-disabled" type="checkbox" name="syrup" id="syrup">
+              <input type="checkbox" name="syrup" id="syrup">
               <label for="syrup">сиропы</label>
-              <input class="checkbox-disabled" type="checkbox" name="jam" id="jam">
+              <input type="checkbox" name="jam" id="jam">
               <label for="jam">джемы</label>
             </div>
             </div>
@@ -306,34 +305,32 @@
                 </li>
               </ul>
           </section>
-    </main>
-  </div>
-    <div class="content-wrapper clearfix">
-    <footer class="main-footer">
-
-    <div class="footer-bottom">
-    <section class="footer-social">
-      <a class="social-btn social-btn-twit" href="#">Твиттер</a>
-      <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-      <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-      <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-    </section>
-    <div class="footer-menu">
-      <div class="footer-menu-item">
-        <a class="heart-icon" href="#"><span>Для поставщиков</span></a>
-        <a href="#">О производстве</a>
-      </div>
-      <div class="footer-menu-item">
-        <a href="#">Наши документы</a>
-        <a href="#">Экологические стандарты</a>
-      </div>
+      </main>
     </div>
-    <section class="footer-copyright">
-      Сделано в <a href="https://htmlacademy.ru">HTML Academy </a><span>&#169;</span> 2017
-    </section>
-  </div>
-
-  </footer>
-</div>
+    <div class="content-wrapper clearfix">
+      <footer class="main-footer">
+      <div class="footer-bottom">
+      <section class="footer-social">
+        <a class="social-btn social-btn-twit" href="#">Твиттер</a>
+        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+      </section>
+      <div class="footer-menu">
+        <div class="footer-menu-item">
+          <a class="heart-icon" href="#"><span>Для поставщиков</span></a>
+          <a href="#">О производстве</a>
+        </div>
+        <div class="footer-menu-item">
+          <a href="#">Наши документы</a>
+          <a href="#">Экологические стандарты</a>
+        </div>
+      </div>
+      <section class="footer-copyright">
+        Сделано в <a href="https://htmlacademy.ru">HTML Academy </a><span>&#169;</span> 2017
+      </section>
+      </div>
+      </footer>
+    </div>
   </body>
 </html>

@@ -6,7 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <input type="radio" id="btn-1" name="toggle" checked>
@@ -48,20 +48,20 @@
               </li>
             </ul>
           </nav>
-        <div class="user-block">
-          <a class="search" href="#"></a>
+          <div class="user-block">
+            <a class="search" href="#"></a>
             <form class="search-form" action="/echo" method="get">
-              <input type="search" name="search" id="search">
+              <input type="search" name="search" id="search" required>
               <label for="search">Что ищем?</label>
             </form>
-          <a class="login" href="#">Вход</a>
+            <a class="login" href="#">Вход</a>
             <form class="login-form" action="/echo" method="post">
-              <div class="login-form-wrapper">
-                <input type="email" name="user-block-email" id="user-block-email">
+              <div class="form-wrapper">
+                <input type="email" name="user-block-email" id="user-block-email" required>
                 <label for="user-block-email">Электронная почта</label>
               </div>
-              <div class="login-form-wrapper">
-                <input type="password" name="password" id="password" >
+              <div class="form-wrapper">
+                <input type="password" name="password" id="password" required>
                 <label for="password">Пароль</label>
               </div>
               <input type="submit" class="btn login-btn" value="Войти">
@@ -70,34 +70,33 @@
                 <a class="forget-new-link" href="#">Новая регистрация</a>
               </div>
             </form>
-          <a class="basket" href="#">Пусто</a>
+            <a class="basket">Пусто</a>
+          </div>
+          <div class="time-work">
+            <p class="time">с 10 до 20, ежедневно</p>
+            <p><b>8 812 450-25-25</b></p>
+          </div>
+        </header>
+        <div class="slider">
+          <div class="slide" id="slide1">
+            <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+            <a class="slide-btn" href="#">Давайте оба!</a>
+          </div>
+          <div class="slide" id="slide2">
+            <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
+            <a class="slide-btn" href="#">Давайте оба!</a>
+          </div>
+          <div class="slide" id="slide3">
+            <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+            <a class="slide-btn" href="#">Давайте оба!</a>
+          </div>
+          <div class="slider-controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
+          </div>
         </div>
-        <div class="time-work">
-          <p class="time">с 10 до 20, ежедневно</p>
-          <p><b>8 812 450-25-25</b></p>
-        </div>
-
-    </header>
-    <div class="slider">
-      <div class="slide" id="slide1">
-        <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
-        <a class="slide-btn" href="#">Давайте оба!</a>
       </div>
-      <div class="slide" id="slide2">
-        <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
-        <a class="slide-btn" href="#">Давайте оба!</a>
-      </div>
-      <div class="slide" id="slide3">
-        <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
-        <a class="slide-btn" href="#">Давайте оба!</a>
-      </div>
-      <div class="slider-controls">
-        <label for="btn-1"></label>
-        <label for="btn-2"></label>
-        <label for="btn-3"></label>
-      </div>
-    </div>
-  </div>
     <div class="content-wrapper clearfix">
     <main class="inner-main">
       <section class="promo">
@@ -134,20 +133,20 @@
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="catalog-item">
-            <img src="img/item-3.png" width="200" height="200" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <div class="catalog-price">
-              355 <span>/кг</span>
-            </div>
+          <img src="img/item-3.png" width="200" height="200" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+          <div class="catalog-price">
+            355 <span>/кг</span>
+          </div>
           <div class="catalog-item-name">
             Сливочно-клубничное с присыпкой из белого шоколада
           </div>
           <a class="btn" href="#">Быстрый просмотр</a>
         </article>
         <article class="catalog-item">
-            <img src="img/item-4.png" width="200" height="200" alt="Сливочное крем-брюле с карамельной подливкой">
-            <div class="catalog-price">
-              415 <span>/кг</span>
-            </div>
+          <img src="img/item-4.png" width="200" height="200" alt="Сливочное крем-брюле с карамельной подливкой">
+          <div class="catalog-price">
+            415 <span>/кг</span>
+          </div>
           <div class="catalog-item-name">
             Сливочное крем-брюле с карамельной подливкой
           </div>
@@ -183,17 +182,17 @@
         <div class="subscribe">
           <p class="subscribe-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form class="mail-form" action="/echo" method="get">
-          <input class="email" type="email" name="email" id="email" placeholder="Электронная почта">
-          <label for="email">Электронная почта</label>
-          <input class="btn subscribe-btn" type="submit" value="Отправить">
+            <input class="email" type="email" name="email" id="email" required>
+            <label for="email">Электронная почта</label>
+            <input class="btn subscribe-btn" type="submit" value="Отправить">
           </form>
-      </div>
+        </div>
       </section>
     </main>
   </div>
-      <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104370521!2d30.320889251959244!3d59.93879418178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1487691614503" allowfullscreen></iframe>
-      </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104370521!2d30.320889251959244!3d59.93879418178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1487691614503" allowfullscreen></iframe>
+    </div>
       <div class="content-wrapper clearfix">
         <footer class="main-footer">
           <div class="contacts">
@@ -232,20 +231,20 @@
         <button class="feedback-form-close" type="button" title="Закрыть">Закрыть</button>
         <a class="close" href="#"></a>
         <b class="feedback-form-title">Мы обязательно вам ответим!</b>
-        <div class="feedback-form-name">
+        <div class="form-wrapper">
+          <input type="text" name="name" id="name" required>
           <label for="name">Как вас зовут?</label>
-          <input type="text" name="name" id="name" placeholder="Как вас зовут?" required>
         </div>
-        <div class="feedback-form-mail">
+        <div class="form-wrapper">
+          <input type="email" name="feedback-form-mail" id="feedback-form-mail" required>
           <label for="feedback-form-mail">Ваша почта для ответа?</label>
-          <input type="email" name="feedback-form-mail" id="feedback-form-mail" placeholder="Ваша почта для ответа?" required>
         </div>
         <div class="feedback-form-massage">
-          <label for="massage"></label>
-          <textarea id="massage">Напишите что-нибудь...</textarea>
+          <textarea id="massage" required></textarea>
+          <label for="massage">Напишите что-нибудь...</label>
         </div>
         <input class="btn overlay-btn" type="submit" value="Отправить">
       </form>
-      <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
