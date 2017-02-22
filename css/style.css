@@ -581,6 +581,7 @@ body > input[type="radio"] {
 
 .mail-form {
   position: relative;
+  padding-bottom: 20px;
 }
 
 .form-wrapper label, .search-form label, .subscribe label, .feedback-form label {
@@ -831,7 +832,7 @@ body > input[type="radio"] {
   line-height: 22px;
   font-weight: bold;
   box-sizing: border-box;
-  background: #7d0e2e url("../img/raspberry.png") no-repeat;
+  background: #7d0e2e url("../img/raspberry.png") repeat;
 }
 
 .promo-item p {
@@ -1417,7 +1418,6 @@ body > input[type="radio"] {
   float: right;
   width: 420px;
   min-height: 220px;
-  padding-bottom: 20px;
   background-image: -webkit-repeating-linear-gradient(315deg, #f8f7f4 0px, #f8f7f4 10px, #92cdff 10px, #92cdff 20px, #f8f7f4 20px, #f8f7f4 30px, #fe9e90 30px, #fe9e90 40px);
   background-image: repeating-linear-gradient(135deg, #f8f7f4 0px, #f8f7f4 10px, #92cdff 10px, #92cdff 20px, #f8f7f4 20px, #f8f7f4 30px, #fe9e90 30px, #fe9e90 40px);
   border-radius: 15px;
@@ -1428,10 +1428,10 @@ body > input[type="radio"] {
 .subscribe::after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: 5px;
   left: 6px;
   width: 408px;
-  height: 96%;
+  height: calc(100% - 10px);
   border-radius: 15px;
   background: #f8f7f4;
   z-index: -1;
@@ -1738,6 +1738,10 @@ body > input[type="radio"] {
 .footer-menu-item span {
   display: block;
   font-weight: bold;
+}
+
+.footer-menu-item a {
+  display: block;
 }
 
 .footer-menu-second {
